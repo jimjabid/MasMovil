@@ -568,6 +568,21 @@
         display: none;
       }
     </style>
+    <style>
+      .mm-hero__cmb {
+        position: absolute;
+        left: 40%;
+        bottom: 20%;
+      }
+
+      @media screen and (max-width: 647px) {
+        .mm-hero__cmb {
+          left: auto;
+          right: 0;
+        }
+      }
+    </style>
+
     <meta property="og:locale" content="es_ES" />
     <meta property="og:site_name" content="MÁSMÓVIL ENERGÍA" />
     <meta
@@ -816,6 +831,7 @@
           data-promotionposition="Hero Home"
           data-promotioncreativename="resines-triangles"
           data-promotioncreativeslot="imagen-hero"
+          style="padding: 0px 5%"
         >
           <div class="ko-grid ko-grid--main-grid">
             <div class="mm-hero mm-hero--default mm-hero--home">
@@ -974,37 +990,6 @@
                     <span><strong>Mismo precio kWh todo el día</strong></span>
                   </li>
                 </ul>
-                <div class="mm-hero__buttons">
-                  <ko-button
-                    href="/tarifas-luz"
-                    data-ctatext="Ver tarifas"
-                    data-promotion=""
-                    role="link"
-                    class="ko-button ko-button--variant-contained ko-button--color-primary ko-button--size-lg hydrated"
-                    ><!----><a href="/tarifas-luz" target="_self"
-                      ><button
-                        id="ko-button-0"
-                        class="ko-button__inner ko-button__inner-link"
-                        type="button"
-                        tabindex="-1"
-                      >
-                        <div class="ko-button__content">
-                          <div class="slot-wrapper">LLamanos</div>
-                        </div>
-                      </button></a
-                    ></ko-button
-                  >
-                  <ko-button
-                    variant="outlined"
-                    color="black"
-                    href="/energia-y-telco"
-                    data-ctatext="Ya soy cliente MÁSMÓVIL"
-                    data-promotion=""
-                    role="link"
-                    class="ko-button ko-button--variant-outlined ko-button--color-black ko-button--size-lg hydrated"
-                    ><!----><a href="/energia-y-telco" target="_self"></a
-                  ></ko-button>
-                </div>
               </div>
               <div class="mm-hero__image">
                 <picture>
@@ -1528,7 +1513,7 @@
                           <div
                             id="BysidePrivacidadeBySideData_665e5960f2a85"
                             class="BysidePrivacidade"
-                            style="height: 65px"
+                            style="height: 100%"
                           >
                             Al hacer clic en el botón "Llamar", usted acepta el
                             uso de sus datos con fines comerciales en el mercado

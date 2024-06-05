@@ -14236,6 +14236,8 @@ body.mm-offcanvas--opened .mm-offcanvas {
   position: fixed;
   transition: box-shadow ease 0.2s;
   width: 100vw;
+  padding-left: 2%;
+  padding-right: 6%;
 }
 .mm-header--full ~ .mm-section--body {
   padding-top: 108px;
