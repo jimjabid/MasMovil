@@ -9370,9 +9370,9 @@ body.mm-offcanvas--opened .mm-offcanvas {
   height: 4px;
   width: 100%;
 }
-.mm-section--hero-bordered {
+/* .mm-section--hero-bordered {
   border-bottom: 4px solid #ffe200;
-}
+} */
 .mm--hero-default {
   padding: 48px 0 16px;
 }
