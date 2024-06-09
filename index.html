@@ -575,13 +575,33 @@
         bottom: 20%;
       }
 
+      #mm-section {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+      }
+
+      #mm-section-2 {
+        padding: 0px 5%;
+      }
+
       @media screen and (max-width: 647px) {
         .mm-hero__cmb {
           left: auto;
           right: 0;
           bottom: 0%;
         }
+        #mm-section {
+          top: 10%;
+          z-index: -1;
+        }
+        #mm-section-2 {
+          padding: 20% 5%;
+        }
       }
+
+      /* style="position: absolute; bottom: 0; width: 100vw"
+          id="mm-section" */
     </style>
 
     <meta property="og:locale" content="es_ES" />
@@ -832,7 +852,7 @@
           data-promotionposition="Hero Home"
           data-promotioncreativename="resines-triangles"
           data-promotioncreativeslot="imagen-hero"
-          style="padding: 0px 5%"
+          id="mm-section-2"
         >
           <div class="ko-grid ko-grid--main-grid">
             <div class="mm-hero mm-hero--default mm-hero--home">
@@ -1370,10 +1390,7 @@
           </div>
         </section>
 
-        <section
-          class="mm-section mm-section--claim"
-          style="position: absolute; bottom: 0; width: 100vw"
-        >
+        <section class="mm-section mm-section--claim" id="mm-section">
           <div class="mm-claim mm-claim--change mm-section--bg-yellow">
             <div class="ko-grid ko-grid--with-spacing ko-grid--main-grid">
               <div class="mm-claim__grid">
