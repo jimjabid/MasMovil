@@ -637,7 +637,7 @@
     <meta name="twitter:creator" content="@masmovilenergia" />
     <meta name="version" content="2024.5.31.26722" />
     <!-- TO DO: Lyca & Lebara icons -->
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="./assests/img/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -696,7 +696,18 @@
     <header
       class="mm-header mm-header--full mm-header mm-header--full mm-header--with-shadow"
     >
-      <div class="mm-header__main">
+      <div class="mm-header__main" style="display: flex">
+        <img
+          src="./assests/img/ads-logo-1.png"
+          alt="logo"
+          style="
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+          "
+        />
         <div class="ko-grid ko-grid--main-grid">
           <div class="mm-header__logo-masmovilenergia">
             <a href="/" title="MÁSMÓVIL ENERGÍA">
@@ -1383,7 +1394,7 @@
                                 >.
                               </p>
                             </div>
-                            <a href="javascript:showMore()" id="link"
+                            <a href="javascript:toggleMoreLess()" id="link"
                               >Leer Mas></a
                             >
                           </div>
@@ -1508,12 +1519,24 @@
     </script>
     <!-- Leer Mas -->
     <script>
-      function showMore() {
+      // function showMore() {
+      //   var link = document.getElementById("link");
+      //   //removes the link
+      //   document.getElementById("link").parentElement.removeChild(link);
+      //   //shows the #more
+      //   document.getElementById("more").style.display = "block";
+      // }
+      function toggleMoreLess() {
+        var moreText = document.getElementById("more");
         var link = document.getElementById("link");
-        //removes the link
-        document.getElementById("link").parentElement.removeChild(link);
-        //shows the #more
-        document.getElementById("more").style.display = "block";
+
+        if (moreText.style.display === "none") {
+          moreText.style.display = "block";
+          link.textContent = "Leer Menos";
+        } else {
+          moreText.style.display = "none";
+          link.textContent = "Leer Mas";
+        }
       }
     </script>
   </body>
