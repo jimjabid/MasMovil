@@ -570,7 +570,7 @@
     </style>
     <style>
       .mm-hero__cmb {
-        position: absolute;
+        position: fixed;
         left: 40%;
         bottom: 20%;
       }
@@ -1042,7 +1042,7 @@
               </div>
             </div>
           </div>
-          <div class="mm-hero__cmb">
+          <div class="mm-hero__cmb move">
             <div id="bysideWebcare_widget_3">
               <div id="webcareslotcontainer_24780" style="">
                 <div class="webcareslot1">
@@ -1375,7 +1375,7 @@
                           <div
                             id="BysidePrivacidadeBySideData_665e5960f2a85"
                             class="BysidePrivacidade"
-                            style="height: 100%"
+                            style="height: auto"
                           >
                             Al hacer clic en el botón "Llamar", usted acepta el
                             uso de sus datos con fines comerciales
@@ -1519,6 +1519,29 @@
     </script>
     <!-- Leer Mas -->
     <script>
+      var move = document.querySelector(".move");
+      let isDragging = false;
+      let offsetX, offsetY;
+
+      move.addEventListener("mousedown", startDragging);
+      document.addEventListener("mousemove", drag);
+      document.addEventListener("mouseup", stopDragging);
+
+      function startDragging(e) {
+        isDragging = true;
+        offsetX = e.clientX - move.offsetLeft;
+        offsetY = e.clientY - move.offsetTop;
+      }
+
+      function drag(e) {
+        if (!isDragging) return;
+        move.style.left = e.clientX - offsetX + "px";
+        move.style.top = e.clientY - offsetY + "px";
+      }
+
+      function stopDragging() {
+        isDragging = false;
+      }
       // function showMore() {
       //   var link = document.getElementById("link");
       //   //removes the link
