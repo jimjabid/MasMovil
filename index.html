@@ -1521,27 +1521,51 @@
     <script>
       var move = document.querySelector(".move");
       let isDragging = false;
-      let offsetX, offsetY;
+      let startX,
+        startY,
+        initialX = 0,
+        initialY = 0;
 
       move.addEventListener("mousedown", startDragging);
+      move.addEventListener("touchstart", startDragging);
       document.addEventListener("mousemove", drag);
+      document.addEventListener("touchmove", drag);
       document.addEventListener("mouseup", stopDragging);
+      document.addEventListener("touchend", stopDragging);
 
       function startDragging(e) {
         isDragging = true;
-        offsetX = e.clientX - move.offsetLeft;
-        offsetY = e.clientY - move.offsetTop;
+        if (e.type === "touchstart") {
+          startX = e.touches[0].clientX - initialX;
+          startY = e.touches[0].clientY - initialY;
+        } else {
+          startX = e.clientX - initialX;
+          startY = e.clientY - initialY;
+        }
       }
 
       function drag(e) {
         if (!isDragging) return;
-        move.style.left = e.clientX - offsetX + "px";
-        move.style.top = e.clientY - offsetY + "px";
+        e.preventDefault();
+
+        if (e.type === "touchmove") {
+          currentX = e.touches[0].clientX - startX;
+          currentY = e.touches[0].clientY - startY;
+        } else {
+          currentX = e.clientX - startX;
+          currentY = e.clientY - startY;
+        }
+
+        initialX = currentX;
+        initialY = currentY;
+
+        move.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
       }
 
       function stopDragging() {
         isDragging = false;
       }
+
       // var move = document.querySelector(".move");
       // let isDragging = false;
       // let offsetX, offsetY;
