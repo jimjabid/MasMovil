@@ -1103,17 +1103,17 @@
                     #BysideWindowBySideData_665e5960f2a85
                       .BysideFillData
                       input {
-                      width: 100%;
+                      /* width: 100%; */
                       height: 28px;
-                      margin-bottom: 5px;
+                      /* margin-bottom: 5px; */
                       color: #949494;
-                      text-indent: 5px;
+                      /* text-indent: 5px; */
                       border: 1px solid #cfcfcf;
                       outline: none;
                       background: #fff;
                       font-weight: 100 !important;
                       text-transform: capitalize;
-                      margin-top: 15px;
+                      /* margin-top: 15px; */
                     }
                     #BysideWindowBySideData_665e5960f2a85
                       .BysideFillData
@@ -1375,27 +1375,16 @@
                           <div
                             id="BysidePrivacidadeBySideData_665e5960f2a85"
                             class="BysidePrivacidade"
-                            style="height: auto"
+                            style="
+                              height: auto;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                            "
                           >
-                            Al hacer clic en el botón "Llamar", usted acepta el
-                            uso de sus datos con fines comerciales
-                            <div id="more" style="display: none">
-                              <p>
-                                en el mercado energético, de acuerdo con la Ley
-                                Orgánica 3/2018, de 5 de diciembre, de
-                                Protección de Datos Personales y garantía de los
-                                derechos digitales (LOPDGDD) de España. Para más
-                                información, consulte nuestra
-                                <a
-                                  class="link_externo"
-                                  href="https://masmovilenergia.es/legal/privacidad"
-                                  target="_blank"
-                                  >política de privacidad</a
-                                >.
-                              </p>
-                            </div>
-                            <a href="javascript:toggleMoreLess()" id="link"
-                              >Leer Mas></a
+                            <input type="checkbox"  id="terms" name="terms"  checked/>
+                            <label for="terms"
+                              >Acepto la politica de datos</label
                             >
                           </div>
                         </div>
