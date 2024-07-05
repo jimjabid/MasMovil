@@ -1517,34 +1517,34 @@
     </script>
     <!-- Leer Mas -->
     <script>
-      var move = document.querySelector(".move");
-      let isDragging = false;
+      // var move = document.querySelector(".move");
+      // let isDragging = false;
 
-      move.addEventListener("mousedown", startDragging);
-      move.addEventListener("touchstart", startDragging);
-      document.addEventListener("mouseup", stopDragging);
-      document.addEventListener("touchend", stopDragging);
+      // move.addEventListener("mousedown", startDragging);
+      // move.addEventListener("touchstart", startDragging);
+      // document.addEventListener("mouseup", stopDragging);
+      // document.addEventListener("touchend", stopDragging);
 
-      function startDragging(e) {
-        isDragging = true;
-        document.addEventListener("mousemove", drag);
-        document.addEventListener("touchmove", drag);
-      }
+      // function startDragging(e) {
+      //   isDragging = true;
+      //   document.addEventListener("mousemove", drag);
+      //   document.addEventListener("touchmove", drag);
+      // }
 
-      function drag(e) {
-        if (!isDragging) return;
-        e.preventDefault(); // Prevent scrolling on mobile
-        var x = (e.clientX || e.touches[0].clientX) + "px";
-        var y = (e.clientY || e.touches[0].clientY) + "px";
-        move.style.left = x;
-        move.style.top = y;
-      }
+      // function drag(e) {
+      //   if (!isDragging) return;
+      //   e.preventDefault(); // Prevent scrolling on mobile
+      //   var x = (e.clientX || e.touches[0].clientX) + "px";
+      //   var y = (e.clientY || e.touches[0].clientY) + "px";
+      //   move.style.left = x;
+      //   move.style.top = y;
+      // }
 
-      function stopDragging() {
-        isDragging = false;
-        document.removeEventListener("mousemove", drag);
-        document.removeEventListener("touchmove", drag);
-      }
+      // function stopDragging() {
+      //   isDragging = false;
+      //   document.removeEventListener("mousemove", drag);
+      //   document.removeEventListener("touchmove", drag);
+      // }
 
       // var move = document.querySelector(".move");
       // let isDragging = false;
